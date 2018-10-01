@@ -1,0 +1,109 @@
+#botao_menu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background: url(../imagens/menu.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+margin-top:5%;
+  top: 0;
+  right: 0;
+  margin-right: 5%;
+}
+
+#botao_menu:hover {
+opacity: 0.7;
+cursor: pointer;
+transition: ease-in-out 1s;
+}
+
+#botao_menu_dentro {
+display: none;
+z-index: 100;
+ background: url(../imagens/menu.png);
+ background-size: 80%;
+  background-repeat: no-repeat;
+width: 40px;
+height: 40px;
+margin-right:5%;
+margin-top: 5%;
+float: right;
+}
+
+#botao_menu_dentro:hover {
+opacity: 0.7;
+cursor: pointer;
+transition: ease-in-out 1s;
+}
+
+#slide_menu {
+height: 100%;
+width: 100%;
+position: fixed;
+background: white;
+top:0;
+overflow-y:scroll;
+transition: 1s;
+font-family: 'oswald-regular';
+color:#292b68;
+margin-left:100%;
+}
+
+#pos_content_menu {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#menus_web {
+  padding-top: 70px;
+  width: 50%;
+  display: block;
+  font-family: 'oswald-regular';
+  font-size: 20px;
+}
+
+#menus_web a {
+  text-decoration: none;
+  color: #292b68;
+}
+
+#menus_web div {
+  margin-top: 3%;
+}
+
+#menus_web {
+  margin-top: 5%;
+}
+
+#menus_web2 {
+  margin-top: 10%;
+  width: 80%;
+  display: block;
+  font-family: 'oswald-regular';
+  font-size: 25px;
+  text-align:center;
+}
+
+#web2_sub1 {
+  margin: 0 auto;
+  width: 10%;
+  display: inline-block;
+}
+
+#web2_sub1 img {
+  width: 100%;
+  display: block;
+}
+
+#web2_sub2 img {
+  width: 100%;
+  display: block;
+}
+
+#web2_sub2 {
+  margin-left:7%;
+  width: 10%;
+  display: inline-block;
+}
