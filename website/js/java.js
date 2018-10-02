@@ -179,14 +179,23 @@ function checkWindow() {
 	}
 }
 
-function checkSlide() {
+/*function checkSlide() {
 	if($(window).width() > $(window).height()) {
 		document.getElementById("content_galeria").style.width = "85%";
 		document.getElementById("close_content_galeria").style.marginBottom = "5%";
 } else {
 	document.getElementById("content_galeria").style.width = "100%";
 	document.getElementById("close_content_galeria").style.marginBottom = "15%";
-}	
+}
+}*/
+
+
+function checkHeight() {
+	console.log($(window).width());
+	//if($(window).width() > 919) {
+		document.getElementById("main_page_background").style.height = $(window).height() + "px";
+		document.getElementById("page_1").style.top = $(window).height() + "px";
+	//}
 }
 
 
@@ -197,7 +206,8 @@ $(document).ready(function(){
 
 	var countTimerCheckWindow = setInterval(function () {
             checkWindow();
-			checkSlide();
+						//checkSlide();
+						checkHeight();
 					}, 200);
 
 $('.slider-for').slick({
@@ -222,14 +232,14 @@ $('.slider-nav').slick({
 });
  //SCROLL DETECT
  /*$(window).scroll(function() {
-  
+
 
   CHEGAR A DETERMINADO ID EM SCROLL
   var hT = $('#foto1').offset().top,
        hH = $('#foto1').outerHeight(),
        wH = $(window).height(),
        wS = $(this).scrollTop();
-   if (wS > (hT+hH-wH)){ code here } 
+   if (wS > (hT+hH-wH)){ code here }
        if ($(window).width() > 900) {
 			if ( $(window).scrollTop() > 500 ) {
 				document.getElementById("scroll_top").style.display = "block";
@@ -290,11 +300,8 @@ $(window).on('hashchange',function(){
 	//END
 });
 
+
 window.onload = function (event) {
-	//console.log($(window).height());
-	if($(window).width() > 919) {
-		document.getElementById("main_page").style.height = $(window).height() + "px";
-	} 
 	//LOCATION PARA REFRESH
 	    if(window.location.hash == "#mudardevida") {
 			openMudardevida();
