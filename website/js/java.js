@@ -194,7 +194,14 @@ function checkHeight() {
 	console.log($(window).width());
 	//if($(window).width() > 919) {
 		document.getElementById("main_page_background").style.height = $(window).height() + "px";
+		//document.getElementById("page_1").style.height = $(window).height() + "px";
+		document.getElementById("body-id").style.height = $(window).height() + "px";
 		document.getElementById("page_1").style.top = $(window).height() + "px";
+		console.log("WINDOW HEIGHT: ", $(window).height(), "px");
+		console.log("MAIN_PAGE_BACKGROUND HEIGHT: ", document.getElementById("main_page_background").style.height);
+		console.log("PAGE_1 HEIGHT: ", document.getElementById("page_1").style.height);
+		console.log("BODY ID: ", document.getElementById("body-id").style.height);
+
 	//}
 }
 
