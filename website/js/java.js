@@ -188,19 +188,29 @@ function checkWindow() {
 	document.getElementById("close_content_galeria").style.marginBottom = "15%";
 }
 }*/
+/*$(window).on('resize', function(){
+	console.log('Window changed');
+
+})*/
 
 
+var bodyId;
+var centerImgPadding;
+var spanPad = $('.span-pad').toArray();
 function checkHeight() {
-	console.log($(window).width());
+	//console.log($(window).width());
 	//if($(window).width() > 919) {
+		bodyId  = $(window).height() - 150;
 		document.getElementById("main_page_background").style.height = $(window).height() + "px";
-		//document.getElementById("page_1").style.height = $(window).height() + "px";
-		document.getElementById("body-id").style.height = $(window).height() + "px";
-		document.getElementById("page_1").style.top = $(window).height() + "px";
-		console.log("WINDOW HEIGHT: ", $(window).height(), "px");
+		document.getElementById("body-id").style.height = bodyId + "px";
+		document.getElementById("wrapper").style.top = $(window).height()  + "px";
+		centerImgPadding = $('.more-info').height() - $('.span-pad').height();
+		$('.span-pad').css('top', centerImgPadding / 2 + "px");
+		//CENTER IMAGE VERTICALLY IN DIV
+		/*console.log("WINDOW HEIGHT: ", $(window).height(), "px");
 		console.log("MAIN_PAGE_BACKGROUND HEIGHT: ", document.getElementById("main_page_background").style.height);
 		console.log("PAGE_1 HEIGHT: ", document.getElementById("page_1").style.height);
-		console.log("BODY ID: ", document.getElementById("body-id").style.height);
+		console.log("BODY ID: ", document.getElementById("body-id").style.height);*/
 
 	//}
 }
@@ -238,11 +248,18 @@ $('.slider-nav').slick({
 
 });
  //SCROLL DETECT
- /*$(window).scroll(function() {
-
-
-  CHEGAR A DETERMINADO ID EM SCROLL
-  var hT = $('#foto1').offset().top,
+$(window).scroll(function() {
+	var scrollOpacityPos = $(window).height() / 4;
+	$('.body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 2);
+	$('.after_body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 6);
+	$('.body').css('background-size', 70 + $(window).scrollTop() / $(window).height() * 6 + "%");
+	if($(window).scrollTop() >= $(window).height() - $('#pos_header').height()) {
+			$('#pos_header').css('background', "pink");
+	} else {
+		$('#pos_header').css('background', "none");
+	}
+  //CHEGAR A DETERMINADO ID EM SCROLL
+  /*var hT = $('#foto1').offset().top,
        hH = $('#foto1').outerHeight(),
        wH = $(window).height(),
        wS = $(this).scrollTop();
@@ -255,10 +272,10 @@ $('.slider-nav').slick({
 			}
 	   } else {
 			document.getElementById("scroll_top").style.display = "none";
-	}
+	}*/
 
 
-});*/
+});
 
  //END
 

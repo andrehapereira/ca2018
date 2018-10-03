@@ -6,12 +6,12 @@
 		margin: 0 auto;
 	}
 #pos_header {
-	display:none;	
+	display:none;
 }
 
 #after_body {
 	position:relative;
-}	
+}
 
 #cartaz {
 
@@ -435,7 +435,7 @@ cursor:default;
 /* prog */
 
 #page_2 {
-	background:#292b68;	
+	background:#292b68;
 }
 #page_2 #programa {
 
@@ -447,14 +447,14 @@ cursor:default;
 
 #page_2 #foto_page2 {
 	display: none;
-	
+
 
 
 }
 
 #foto_page1 {
 background-size:100%;
-	width: 100%;	
+	width: 100%;
 }
 
 .smart {
@@ -609,6 +609,14 @@ cursor:default;
 user-select: none;
 }
 
+}
+
+@media only screen and (max-width : 768px) {
+	.poster img {
+		position:initial;
+		transform:none;
+		margin-bottom: 50px;
+	}
 }
 @media only screen and (max-width : 500px) {
 	#header h1 {
