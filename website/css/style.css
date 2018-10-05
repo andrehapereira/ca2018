@@ -97,6 +97,7 @@ p a:hover {
 	z-index: 10;
 	height: 70px;
 	display:block;
+	transition: background-color 1s ease;
 }
 
 #header {
@@ -143,6 +144,10 @@ p a:hover {
 	background-repeat: no-repeat;
 	background-position: bottom center;*/
 	border-bottom: solid 2px white;
+}
+
+.menu-color {
+	background: pink;
 }
 
 #header ul#navigation li a {
@@ -1124,7 +1129,7 @@ user-select: none;
 	font-family: 'oswald-regular';
 	font-size: 1.2vw;
 	color:#292b68;
-	z-index: 2;
+	z-index: 300;
 
 }
 
@@ -1163,14 +1168,14 @@ user-select: none;
 }
 
 #mudardevida_cartaz {
-	display: none;
+	display: block;
 	width:100%;
 }
 
 #info_mudardevida {
 	width: 59%;
 	text-align:justify;
-	display:none;
+	display:block;
 }
 
 #perdidos_cartaz {

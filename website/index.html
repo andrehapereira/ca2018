@@ -5,23 +5,30 @@
 	<title>Cine Atlântico</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-<link rel="icon" type="image/png" href="imagens/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="imagens/favicon-32x32.png" sizes="32x32">
- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-<link rel="stylesheet" type="text/css" href="css/menu.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script type='text/javascript' src='js/mobile.js'></script>
+  <link rel="icon" type="image/png" href="imagens/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="imagens/favicon-32x32.png" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type='text/javascript' src='js/mobile.js'></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
     </script>
 		<script type="text/javascript" src="dist/js/smooth-scroll.min.js"></script>
 		<script type="text/javascript" src="dist/js/smooth-scroll.polyfills.min.js"></script>
    <!-- <script type="text/javascript" src="js/smoothscroll.js"></script>-->
+   <!-- IMPORT DATA FILES-->
+   <script type="text/javascript" src="js/data/colo.js"></script>
+   <script type="text/javascript" src="js/data/batraquio.js"></script>
+
+   <!-- //IMPORT DATA FILES-->
+   <script type="text/javascript" src="js/arrays.js"></script>
     <script type="text/javascript" src="js/java.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
 </head>
 <body id="topo">
-  <div id="botao_menu" onClick="openMenu()"></div>
+
+  <div id="botao_menu" class="menu-selected"></div>
   <div id="pos_header">
     <div id="header">
 		<ul id="navigation">
@@ -44,6 +51,11 @@
 		</ul>
 	 </div>
   </div>
+  <!-- MOVIES INFO -->
+  <div id="sub_content">
+
+  </div>
+  <!-- //MOVIES INFO -->
   <div id="main_page_background">
   <div id="body-id" class="body">
   		<!--<img src="imagens/home.png" alt="Cine Atlantico" class="figure">-->
@@ -207,7 +219,7 @@
                 <div class="more-info">
                   <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-2">
-                      <a href="#"><img src="imagens/plus.png" /></a>
+                    <img onclick="openSubContent(0)" src="imagens/plus.png" />
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-10 col-10">
                       <span class="span-pad">COLO</span>
@@ -220,7 +232,7 @@
                 <div class="more-info">
                   <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-2">
-                      <a href="#"><img src="imagens/plus.png" /></a>
+                      <img onclick="openSubContent(1)" src="imagens/plus.png" />
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-10 col-10">
                       <span class="span-pad">A BALADA DE UM BATRÁQUIO</span>
@@ -341,20 +353,19 @@
 
     <!-- MENU -->
         <div id="slide_menu">
-          <div id="botao_menu_dentro" onClick="closeMenu()"></div>
           <div id="pos_content_menu">
             <div id="menus_web">
-        				<div><a data-easing="linear" href="#sobre" onClick="closeMenu()">A MOSTRA</a></div>
-        				<div><a data-easing="linear" href="#programa" onClick="closeMenu()">PROGRAMA</a></div>
-        				<div><a data-easing="linear" href="#filmes" onClick="closeMenu()">FILMES</a></div>
-        				<div><a href="#" target="_blank">PRESS KIT</a></div>
+                <div id="web2_sub1"><a data-easing="linear" href="#topo" class="menu-selected"><img src="imagens/home_button.png"></a></div>
+        				<div><a data-easing="linear" href="#sobre" class="menu-selected">A MOSTRA</a></div>
+        				<div><a data-easing="linear" href="#programa" class="menu-selected">PROGRAMA</a></div>
+        				<div><a data-easing="linear" href="#filmes" class="menu-selected">FILMES</a></div>
+                <div><a data-easing="linear" href="#galeria" class="menu-selected">GALERIA</a></div>
             </div>
               <div id="menus_web2">
-    						<div id="web2_sub1"><a href="#topo" onClick="closeMenu()"><img src="imagens/home_button.png"></a></div>
-    						<div id="web2_sub2"><a href="http://cineclubeilhaterceira.blogspot.pt" target="_blank"><img src="imagens/blog.png"></a></div>
+    						<!--<div id="web2_sub2"><a href="http://cineclubeilhaterceira.blogspot.pt" target="_blank"><img src="imagens/blog.png"></a></div>
                 <div id="web2_sub2"><a href="https://www.facebook.com/cineclubeilhaterceira" target="_blank"><img src="imagens/face.png"></a></div>
     		        <div id="web2_sub2"><a href="https://www.instagram.com/cineclubedailhaterceira/" target="_blank"><img src="imagens/insta.png"></a></div>
-                <div id="web2_sub2"><a href="https://goo.gl/maps/SeshL3mLc2n" target="_blank"><img src="imagens/location.png"></a></div>
+                <div id="web2_sub2"><a href="https://goo.gl/maps/SeshL3mLc2n" target="_blank"><img src="imagens/location.png"></a></div>-->
     		      </div>
           </div>
         </div>

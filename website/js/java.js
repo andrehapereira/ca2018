@@ -1,10 +1,37 @@
-
+var menuOpen = false;
 // SOBRE
 function openGaleria() {
 	//document.getElementById("content_popup_sobre").style.display = "block";
 	document.getElementById("sub_content_galeria").style.height = "100%";
 	document.getElementById("topo").style.overflowY = "hidden";
 	window.location.hash = "#galeria";
+}
+
+function openSubContent(arrIndex) {
+	document.getElementById("sub_content").style.height = "100%";
+	document.getElementById("topo").style.overflowY = "hidden";
+	document.getElementById("sub_content").innerHTML = "";
+	var subContentHtml = "<div id='close_content' onclick='closeSubcontent(); addHashHome();'></div>";
+	subContentHtml += "<div id='content_pos'>";
+	subContentHtml += "<div class='container-fluid'>";
+	subContentHtml += "<div class='row'>";
+	subContentHtml += "<div class='col-xs-12 col-sm-12 col-md-5'>";
+	console.log(movieObjArr[arrIndex].img);
+	subContentHtml += "<img style='width:100%' src='" + movieObjArr[arrIndex].img + "'>";
+	subContentHtml += "</div>";
+	subContentHtml += "<div class='col-xs-12 col-sm-12 col-md-7'>";
+	for(var key in movieObjArr[arrIndex]) {
+		if(key == "img") {
+			continue;
+		}
+		subContentHtml += "<div style='margin-bottom: 1%;'>" + key.toUpperCase() + ": <span>" + movieObjArr[arrIndex][key] + "</span></div>";
+	}
+	subContentHtml += "</div>";
+	subContentHtml += "</div>";
+	subContentHtml += "</div>";
+	subContentHtml += "</div>";
+	//console.log(subContentHtml)
+	document.getElementById("sub_content").innerHTML = subContentHtml;
 }
 
 function openMudardevida() {
@@ -150,32 +177,36 @@ setTimeout(function() {
 }, 1000);
 }
 
-var checkMenu = 0;
-function openMenu() {
+
+/*function toggleMenu() {
 		document.getElementById("slide_menu").style.marginLeft = "0%";
 		document.getElementById("topo").style.overflowY = "hidden";
 		setTimeout(function() {
 			document.getElementById("botao_menu_dentro").style.display = "block"
 		}, 1000);
-		checkMenu = 1;
+}*/
 
-}
 
-function closeMenu() {
+/*function closeMenu() {
 		document.getElementById("slide_menu").style.marginLeft = "100%";
 		document.getElementById("topo").style.overflowY = "scroll";
 		setTimeout(function(){
 			document.getElementById("botao_menu_dentro").style.display = "none";
 		}, 1000);
 		checkMenu = 0;
-}
+}*/
 
 // FIM SOBRE
 function checkWindow() {
-	if (($(window).width() < 919) && (checkMenu === 0) ) {
+	if (($(window).width() < 919)) {
 		document.getElementById("botao_menu").style.display = "block";
 	} else {
 		document.getElementById("botao_menu").style.display = "none";
+		$('#slide_menu').css('margin-left', "100%");
+		if(menuOpen) {
+			$('#topo').css('overflow-y', "scroll");
+		}
+		menuOpen = false;
 	}
 }
 
@@ -227,36 +258,49 @@ $(document).ready(function(){
 						checkHeight();
 					}, 200);
 
-$('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
+		$('.slider-for').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: true,
+		  fade: true,
+		  asNavFor: '.slider-nav'
+		});
 
-$('.slider-nav').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  dots: false,
-  centerMode: true,
-  focusOnSelect: true,
-  arrows: false
-});
+		$('.slider-nav').slick({
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  asNavFor: '.slider-for',
+		  dots: false,
+		  centerMode: true,
+		  focusOnSelect: true,
+		  arrows: false
+		});
 
+
+		$('.menu-selected').click(function() {
+			if(!menuOpen) {
+				$('#slide_menu').css('margin-left', 0);
+				$('#topo').css('overflow-y', "hidden");
+				menuOpen = true;
+			} else {
+				$('#slide_menu').css('margin-left', "100%");
+				$('#topo').css('overflow-y', "scroll");
+				menuOpen = false;
+			}
+		});
 
 });
  //SCROLL DETECT
+
 $(window).scroll(function() {
 	var scrollOpacityPos = $(window).height() / 4;
 	$('.body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 2);
 	$('.after_body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 6);
 	$('.body').css('background-size', 70 + $(window).scrollTop() / $(window).height() * 6 + "%");
 	if($(window).scrollTop() >= $(window).height() - $('#pos_header').height()) {
-			$('#pos_header').css('background', "pink");
+			$('#pos_header').addClass('menu-color');
 	} else {
-		$('#pos_header').css('background', "none");
+		$('#pos_header').removeClass('menu-color');
 	}
   //CHEGAR A DETERMINADO ID EM SCROLL
   /*var hT = $('#foto1').offset().top,

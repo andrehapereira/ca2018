@@ -1,7 +1,7 @@
 #botao_menu {
 
   position: fixed;
-  z-index: 3;
+  z-index: 200;
   background: url(../imagens/menu.png);
   background-size: 80%;
   background-repeat: no-repeat;
@@ -42,6 +42,7 @@ transition: ease-in-out 1s;
 height: 100%;
 width: 100%;
 position: fixed;
+z-index: 99;
 background: white;
 top:0;
 overflow-y:scroll;
