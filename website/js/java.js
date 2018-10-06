@@ -17,7 +17,7 @@ function openSubContent(arrIndex) {
 	subContentHtml += "<div class='row'>";
 	subContentHtml += "<div class='col-xs-12 col-sm-12 col-md-5'>";
 	console.log(movieObjArr[arrIndex].img);
-	subContentHtml += "<img style='width:100%' src='" + movieObjArr[arrIndex].img + "'>";
+	subContentHtml += "<img style='width:100%; max-width: 500px;' src='" + movieObjArr[arrIndex].img + "'>";
 	subContentHtml += "</div>";
 	subContentHtml += "<div class='col-xs-12 col-sm-12 col-md-7'>";
 	for(var key in movieObjArr[arrIndex]) {
@@ -32,149 +32,14 @@ function openSubContent(arrIndex) {
 	subContentHtml += "</div>";
 	//console.log(subContentHtml)
 	document.getElementById("sub_content").innerHTML = subContentHtml;
-}
-
-function openMudardevida() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("mudardevida_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_mudardevida").style.display = "block";
-	} else {
-		document.getElementById("info_mudardevida").style.display = "inline-block";
-	}
-	window.location.hash = "#mudardevida";
-}
-
-function openPeregrinacao() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("peregrinacao_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_peregrinacao").style.display = "block";
-	} else {
-		document.getElementById("info_peregrinacao").style.display = "inline-block";
-	}
-	window.location.hash = "#peregrinacao";
-}
-
-function openPerdidos() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("perdidos_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_perdidos").style.display = "block";
-	} else {
-		document.getElementById("info_perdidos").style.display = "inline-block";
-	}
-	window.location.hash = "#perdidos";
-}
-
-function openLuzobscura() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("luzobscura_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_luzobscura").style.display = "block";
-	} else {
-		document.getElementById("info_luzobscura").style.display = "inline-block";
-	}
-	window.location.hash = "#luzobscura";
-}
-
-function openRealidade() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("realidade_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_realidade").style.display = "block";
-	} else {
-		document.getElementById("info_realidade").style.display = "inline-block";
-	}
-	window.location.hash = "#intericiosdarealidade";
-}
-
-function openFabricadonada() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("fabricadonada_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_fabricadonada").style.display = "block";
-	} else {
-		document.getElementById("info_fabricadonada").style.display = "inline-block";
-	}
-	window.location.hash = "#fabricadonada";
-}
-
-function openAlberto() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("alberto_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_alberto").style.display = "block";
-	} else {
-		document.getElementById("info_alberto").style.display = "inline-block";
-	}
-	window.location.hash = "#alberto";
-}
-
-function openTreblinka() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("treblinka_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_treblinka").style.display = "block";
-	} else {
-		document.getElementById("info_treblinka").style.display = "inline-block";
-	}
-	window.location.hash = "#treblinka";
-}
-
-function openCoracaonegro() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
-	document.getElementById("sub_content").style.height = "100%";
-	document.getElementById("topo").style.overflowY = "hidden";
-	document.getElementById("coracaonegro_cartaz").style.display = "block";
-	if ($(window).width() < 900) {
-		document.getElementById("info_coracaonegro").style.display = "block";
-	} else {
-		document.getElementById("info_coracaonegro").style.display = "inline-block";
-	}
-	window.location.hash = "#coracaonegro";
+	window.location.hash = "#" + arrIndex;
 }
 
 function closeSubcontent() {
-document.getElementById("sub_content").style.height = "0%";
-document.getElementById("topo").style.overflowY = "scroll";
-document.getElementById("sub_content_galeria").style.height = "0%";
-setTimeout(function() {
-	document.getElementById("mudardevida_cartaz").style.display = "none";
-	document.getElementById("info_mudardevida").style.display = "none";
-	document.getElementById("perdidos_cartaz").style.display = "none";
-	document.getElementById("info_perdidos").style.display = "none";
-	document.getElementById("luzobscura_cartaz").style.display = "none";
-	document.getElementById("info_luzobscura").style.display = "none";
-	document.getElementById("realidade_cartaz").style.display = "none";
-	document.getElementById("info_realidade").style.display = "none";
-	document.getElementById("fabricadonada_cartaz").style.display = "none";
-	document.getElementById("info_fabricadonada").style.display = "none";
-	document.getElementById("alberto_cartaz").style.display = "none";
-	document.getElementById("info_alberto").style.display = "none";
-	document.getElementById("treblinka_cartaz").style.display = "none";
-	document.getElementById("info_treblinka").style.display = "none";
-	document.getElementById("coracaonegro_cartaz").style.display = "none";
-	document.getElementById("info_coracaonegro").style.display = "none";
-	document.getElementById("peregrinacao_cartaz").style.display = "none";
-	document.getElementById("info_peregrinacao").style.display = "none";
-}, 1000);
+	document.getElementById("sub_content").style.height = "0%";
+	document.getElementById("topo").style.overflowY = "scroll";
+	window.location.hash = "#home";
+//document.getElementById("sub_content_galeria").style.height = "0%";
 }
 
 
@@ -200,8 +65,10 @@ setTimeout(function() {
 function checkWindow() {
 	if (($(window).width() < 919)) {
 		document.getElementById("botao_menu").style.display = "block";
+		document.getElementById("pos_header").style.display = "none";
 	} else {
 		document.getElementById("botao_menu").style.display = "none";
+		document.getElementById("pos_header").style.display = "block";
 		$('#slide_menu').css('margin-left', "100%");
 		if(menuOpen) {
 			$('#topo').css('overflow-y', "scroll");
@@ -251,7 +118,7 @@ function checkHeight() {
 
 $(document).ready(function(){
 
-
+createMoviesHTML();
 	var countTimerCheckWindow = setInterval(function () {
             checkWindow();
 						//checkSlide();
@@ -297,7 +164,7 @@ $(window).scroll(function() {
 	$('.body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 2);
 	$('.after_body').css('opacity', 1 - $(window).scrollTop() / $(window).height() * 6);
 	$('.body').css('background-size', 70 + $(window).scrollTop() / $(window).height() * 6 + "%");
-	if($(window).scrollTop() >= $(window).height() - $('#pos_header').height()) {
+	if($(window).scrollTop() >= $(window).height() - $('#pos_header').height() * 3) {
 			$('#pos_header').addClass('menu-color');
 	} else {
 		$('#pos_header').removeClass('menu-color');
@@ -329,78 +196,34 @@ $(window).scroll(function() {
 
 $(window).on('hashchange',function(){
 //LOCATION PARA BACK/FORWARD BUTTONS
-    if(window.location.hash == "#home") {
-			closeSubcontent();
-	}else {
-
-		if(window.location.hash == "#mudardevida") {
-			openMudardevida();
-		}
-		if(window.location.hash == "#perdidos") {
-			openPerdidos();
-		}
-
-		if(window.location.hash == "#luzobscura") {
-			openLuzobscura();
-		}
-		if(window.location.hash == "#intericiosdarealidade") {
-			openRealidade();
-		}
-		if(window.location.hash == "#fabricadonada") {
-			openFabricadonada();
-		}
-		if(window.location.hash == "#alberto") {
-			openAlberto();
-		}
-		if(window.location.hash == "#treblinka") {
-			openTreblinka();
-		}
-		if(window.location.hash == "#coracaonegro") {
-			openCoracaonegro();
-		}
-		if(window.location.hash == "#galeria") {
-			openGaleria();
-		}
-		if(window.location.hash == "#peregrinacao") {
-			openPeregrinacao();
+	console.log("change");
+	var hash = window.location.hash;
+	for(var i = 0; i < movieObjArr.length; i++) {
+		if(hash == "#" + i) {
+			openSubContent(i);
+			console.log('opened');
+			break;
 		}
 	}
-	//END
+    if(window.location.hash == "#home") {
+			closeSubcontent();
+	}
 });
 
 
 window.onload = function (event) {
 	//LOCATION PARA REFRESH
-	    if(window.location.hash == "#mudardevida") {
-			openMudardevida();
-		}
-		else if(window.location.hash == "#perdidos") {
-			openPerdidos();
-		}
-		else if(window.location.hash == "#luzobscura") {
-			openLuzobscura();
-		}
-		else if(window.location.hash == "#intericiosdarealidade") {
-			openRealidade();
-		}
-		else if(window.location.hash == "#fabricadonada") {
-			openFabricadonada();
-		}
-		else if(window.location.hash == "#alberto") {
-			openAlberto();
-		}
-		else if(window.location.hash == "#treblinka") {
-			openTreblinka();
-		}
-		 else if(window.location.hash == "#coracaonegro") {
-			openCoracaonegro();
-		} else if(window.location.hash == "#galeria") {
-			openGaleria();
-		} else if(window.location.hash == "#peregrinacao") {
-			openPeregrinacao();
-		} else {
-	window.location.hash = "#home";
-		}
+	var hash = window.location.hash;
+	for(var i = 0; i < movieObjArr.length; i++) {
+	 if(hash == "#" + i) {
+		 openSubContent(i);
+		 console.log('opened');
+		 break;
+	 }
+ }
+if(window.location.hash == "#home") {
+		 closeSubcontent();
+ }
 		//END
 
 		//MUDAR BACKGROUND CONFORME SLIDE POSITION

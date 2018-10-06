@@ -1,7 +1,7 @@
 var sinopseCoelhoMau = "Um rapaz tímido domina o amante da mãe. A beleza e o horror trocam carícias. Deuses adolescentes desafiam morais convencionais. A morte prostitui-se vestida de criança.";
 
 var coelhoMau = {
-  "img" : "imagens/filmes/mudardevida_thumb.jpg",
+  "img" : "imagens/filmes/coelho_mau.jpg",
   "Título" : "Coelho Mau",
   "Realizador(a)" : "Carlos Conceição",
   "Com" : "Carla Maciel, João Arrais, Julia Palha, Matthieu Charneau",

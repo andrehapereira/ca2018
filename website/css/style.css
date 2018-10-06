@@ -95,9 +95,9 @@ p a:hover {
 	position: fixed;
 	padding-top: 1%;
 	z-index: 10;
-	height: 70px;
+	height: 90px;
 	display:block;
-	transition: background-color 1s ease;
+	transition: background-color .5s ease;
 }
 
 #header {
@@ -143,15 +143,14 @@ p a:hover {
 	background-size: 70%;
 	background-repeat: no-repeat;
 	background-position: bottom center;*/
-	border-bottom: solid 2px white;
 }
 
 .menu-color {
-	background: pink;
+	background: #ee2b7c;
 }
 
 #header ul#navigation li a {
-	color: #292b68;
+	color: #ffffff;
 	font-size: 20px;
 	padding: 0 15px;
 	text-align: center;
@@ -618,8 +617,8 @@ margin-bottom:0px;
 	display: inline-block;
 	width: 100%;
 	background: url('../imagens/content_background.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: 100%;
+	background-repeat: repeat;
 }
 
 
@@ -628,8 +627,8 @@ margin-bottom:0px;
 	width:100%;
 	display: inline-block;
 	top:0;
-	padding-top:5%;
-	padding-bottom: 5%;
+	padding-top:6%;
+	padding-bottom: 6%;
 	float:right;
 
 }
@@ -638,7 +637,7 @@ margin-bottom:0px;
  .header_span {
 	font-size:2vw;
 	font-family: 'oswald-light';
-	color: 	#48b76f;
+	color: 	#262262;
 	width: 70%;
 	margin: 0 auto;
 	text-align:left;
@@ -646,7 +645,7 @@ margin-bottom:0px;
 
 }
 .header_sobre {
-	color: 	#48b76f;
+	color: 	#262262;
 	width: 70%;
 	margin: 0 auto;
 	font-family: 'snickels';
@@ -665,11 +664,12 @@ cursor:default;
 
 #sobre .conteudo_sobre {
 	font-size:18px;
-	color: #292b68;
+	color: #262262;
 	width: 70%;
 	margin: 0 auto;
 	text-align: justify;
 	font-family: 'oswald-light';
+	padding-top: 30px;
 	/*margin-top: 100px;
 	margin-bottom: 100px;*/
 }
@@ -685,7 +685,7 @@ cursor:default;
 	width: 100%;
 	background: #292b68;
 	display: inline-block;
-	padding:5% 0;
+	padding:6% 0;
 }
 
 #foto_page2 {
@@ -736,6 +736,10 @@ cursor:default;
 	margin-bottom:10%;
 }
 
+.white-text {
+	color: #ffffff!important;
+}
+
 .poster {
 	position:relative;
 	width:100%;
@@ -768,7 +772,7 @@ cursor:default;
 
 .dates {
 	font-weight: bold;
-	color:yellow;
+	color: #ffde17;
 }
 
 .smart {
@@ -781,44 +785,16 @@ cursor:default;
 
 #filmes {
 	background: url('../imagens/content_background.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: 100%;
+	background-repeat: repeat;
 	margin-top: -0.8%;
 	position: relative;
-	padding-top:5%;
-	padding-bottom: 5%;
+	padding-top:6%;
+	padding-bottom: 6%;
 
 }
 
- #header_span_blue {
-	font-size:2vw;
-	font-family: 'oswald-light';
-	color: 	#292B68;
-	width: 70%;
-	margin: 0 auto;
-	text-align:left;
-	margin-bottom:5%;
-
-}
-
-#filmes #header_filmes {
-	color: 	#292b68;
-	width: 70%;
-	margin: 0 auto;
-	font-family: 'snickels';
-	font-size: 4vw;
-	text-align:left;
-
-	-webkit-user-select: none; /* Chrome/Safari */
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+ */
-
--o-user-select: none;
-user-select: none;
-cursor:default;
-}
-
-#filmes .conteudo_filmes {
+#filmes #conteudo_filmes {
 	width: 90%;
 	height: auto;
 	margin: 0 auto 0;
@@ -827,7 +803,10 @@ cursor:default;
 
 .film-poster {
 	width:100%;
+	max-width: 400px;
 	margin-top:30px;
+	height:88%;
+	max-height: 558px;
 }
 
 .more-info {
@@ -836,95 +815,14 @@ cursor:default;
 
 .more-info img {
 	width:100%;
-	min-width: 40px;
-	max-width: 50px;
+	min-width: 30px;
+	max-width: 40px;
 }
 
 .span-pad {
 	font-weight: bold;
 	font-size:16px;
 	position:absolute;
-}
-
-#mudardevida {
-	background: url(../imagens/filmes/mudardevida_thumb.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#realidade {
-	background: url(../imagens/filmes/realidade.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#fabricadonada {
-	background: url(../imagens/filmes/fabricadonada_thumb.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#alberto {
-	background: url(../imagens/filmes/alberto.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#coracaonegro {
-	background: url(../imagens/filmes/coracaonegro.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#peregrinacao {
-	background: url(../imagens/filmes/peregrinacao.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#treblinka {
-	background: url(../imagens/filmes/treblinka.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#perdidos {
-	background: url(../imagens/filmes/perdidos_thumb.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
-}
-
-#luzobscura {
-	background: url(../imagens/filmes/luzobscura_thumb.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
-	width:100%;
-	padding-top:144%;
-	margin-bottom:4%;
 }
 
 #positioning {
@@ -1015,20 +913,22 @@ cursor:default;
 /*FIM */
 /* APOIOS */
 #apoios {
-	background: #292b68;
+	background: #262262;
 }
 
 
 #apoios #conteudo_apoios {
-	background: url(../imagens/apoios.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
+
 	margin: 0 auto 0;
-	max-width: 85%;
+	max-width: 900px;
 	min-height: 0;
 	overflow: hidden;
-	padding-top:25%;
+	padding: 80px 0;
+
+}
+
+#apoios #conteudo_apoios img {
+	width:100%;
 }
 
 /* FIM APOIOS */
@@ -1056,8 +956,8 @@ cursor:default;
 
 #design {
 text-align:center;
-color: #292b68;
-background-color: #48b76f;
+color: #ffffff;
+background-color: #262262;
 width:100%;
 height: auto;
 font-size:10px;
@@ -1123,20 +1023,22 @@ user-select: none;
 	height: 0%;
 	position: fixed;
 	top:0;
-	background: #FFFFFF;
+	background: url('../imagens/background.jpg');
 	overflow-y:scroll;
     transition: 1s;
 	font-family: 'oswald-regular';
 	font-size: 1.2vw;
-	color:#292b68;
+	color:#262262;
 	z-index: 300;
 
 }
 
 #content_pos{
-	width: 70%;
+	width: 80%;
 	margin:0 auto;
-	padding-bottom:2%;
+	padding:40px;
+	background: url('../imagens/content_background.jpg');
+	margin-bottom: 40px;
 }
 
 #close_content {

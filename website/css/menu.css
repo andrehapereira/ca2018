@@ -1,5 +1,4 @@
 #botao_menu {
-
   position: fixed;
   z-index: 200;
   background: url(../imagens/menu.png);
@@ -43,12 +42,12 @@ height: 100%;
 width: 100%;
 position: fixed;
 z-index: 99;
-background: white;
+background: #ee2b7c;
 top:0;
 overflow-y:scroll;
 transition: 1s;
 font-family: 'oswald-regular';
-color:#292b68;
+color:#ffffff;
 margin-left:100%;
 }
 
@@ -62,12 +61,12 @@ margin-left:100%;
   width: 50%;
   display: block;
   font-family: 'oswald-regular';
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #menus_web a {
   text-decoration: none;
-  color: #292b68;
+  color: #ffffff;
 }
 
 #menus_web div {
@@ -81,21 +80,25 @@ margin-left:100%;
 #menus_web2 {
   margin-top: 10%;
   width: 80%;
+  max-width: 400px;
   display: block;
   font-family: 'oswald-regular';
   font-size: 25px;
-  text-align:center;
+  text-align:left;
 }
 
 #web2_sub1 {
+  font-size: 44px;
+  font-family: 'snickels';
   margin: 0 auto;
-  width: 10%;
+  width: 100%;
   display: inline-block;
 }
 
 #web2_sub1 img {
   width: 100%;
-  display: block;
+  max-width: 35px;
+  margin-top: -8px;
 }
 
 #web2_sub2 img {
