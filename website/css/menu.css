@@ -1,15 +1,16 @@
 #botao_menu {
   position: fixed;
   z-index: 200;
-  background: url(../imagens/menu.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
 margin-top:5%;
   top: 0;
   right: 0;
   margin-right: 5%;
+  background: rgba(238,43,124, 0.5);
+  border-radius: 10px;
+}
+
+.hamburger-inner, .hamburger.is-active {
+  color: #ffffff;
 }
 
 #botao_menu:hover {
@@ -18,24 +19,10 @@ cursor: pointer;
 transition: ease-in-out 1s;
 }
 
-#botao_menu_dentro {
-display: none;
-z-index: 100;
- background: url(../imagens/menu.png);
- background-size: 80%;
-  background-repeat: no-repeat;
-width: 40px;
-height: 40px;
-margin-right:5%;
-margin-top: 5%;
-float: right;
+#botao_menu:focus {
+  outline:none;
 }
 
-#botao_menu_dentro:hover {
-opacity: 0.7;
-cursor: pointer;
-transition: ease-in-out 1s;
-}
 
 #slide_menu {
 height: 100%;
@@ -77,16 +64,6 @@ margin-left:100%;
   margin-top: 5%;
 }
 
-#menus_web2 {
-  margin-top: 10%;
-  width: 80%;
-  max-width: 400px;
-  display: block;
-  font-family: 'oswald-regular';
-  font-size: 25px;
-  text-align:left;
-}
-
 #web2_sub1 {
   font-size: 44px;
   font-family: 'snickels';
@@ -99,15 +76,4 @@ margin-left:100%;
   width: 100%;
   max-width: 35px;
   margin-top: -8px;
-}
-
-#web2_sub2 img {
-  width: 100%;
-  display: block;
-}
-
-#web2_sub2 {
-  margin-left:7%;
-  width: 10%;
-  display: inline-block;
 }

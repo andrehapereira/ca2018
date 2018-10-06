@@ -1,7 +1,6 @@
 var menuOpen = false;
 // SOBRE
 function openGaleria() {
-	//document.getElementById("content_popup_sobre").style.display = "block";
 	document.getElementById("sub_content_galeria").style.height = "100%";
 	document.getElementById("topo").style.overflowY = "hidden";
 	window.location.hash = "#galeria";
@@ -23,6 +22,10 @@ function openSubContent(arrIndex) {
 	for(var key in movieObjArr[arrIndex]) {
 		if(key == "img") {
 			continue;
+		} else if(key == "Trailer") {
+			subContentHtml += "<div style='margin-bottom: 1%;margin-top: 40px; text-align:center;'>" + key.toUpperCase() +"</div>";
+			subContentHtml += "<iframe style='background: black;' width='100%' height='360' src='" + movieObjArr[arrIndex][key] + "'></iframe>"
+			continue;
 		}
 		subContentHtml += "<div style='margin-bottom: 1%;'>" + key.toUpperCase() + ": <span>" + movieObjArr[arrIndex][key] + "</span></div>";
 	}
@@ -39,27 +42,12 @@ function closeSubcontent() {
 	document.getElementById("sub_content").style.height = "0%";
 	document.getElementById("topo").style.overflowY = "scroll";
 	window.location.hash = "#home";
+	setTimeout(function(){
+		document.getElementById("sub_content").innerHTML = "";
+	}, 1000);
 //document.getElementById("sub_content_galeria").style.height = "0%";
 }
 
-
-/*function toggleMenu() {
-		document.getElementById("slide_menu").style.marginLeft = "0%";
-		document.getElementById("topo").style.overflowY = "hidden";
-		setTimeout(function() {
-			document.getElementById("botao_menu_dentro").style.display = "block"
-		}, 1000);
-}*/
-
-
-/*function closeMenu() {
-		document.getElementById("slide_menu").style.marginLeft = "100%";
-		document.getElementById("topo").style.overflowY = "scroll";
-		setTimeout(function(){
-			document.getElementById("botao_menu_dentro").style.display = "none";
-		}, 1000);
-		checkMenu = 0;
-}*/
 
 // FIM SOBRE
 function checkWindow() {
@@ -77,40 +65,16 @@ function checkWindow() {
 	}
 }
 
-/*function checkSlide() {
-	if($(window).width() > $(window).height()) {
-		document.getElementById("content_galeria").style.width = "85%";
-		document.getElementById("close_content_galeria").style.marginBottom = "5%";
-} else {
-	document.getElementById("content_galeria").style.width = "100%";
-	document.getElementById("close_content_galeria").style.marginBottom = "15%";
-}
-}*/
-/*$(window).on('resize', function(){
-	console.log('Window changed');
-
-})*/
-
-
 var bodyId;
 var centerImgPadding;
 var spanPad = $('.span-pad').toArray();
 function checkHeight() {
-	//console.log($(window).width());
-	//if($(window).width() > 919) {
 		bodyId  = $(window).height() - 150;
 		document.getElementById("main_page_background").style.height = $(window).height() + "px";
 		document.getElementById("body-id").style.height = bodyId + "px";
 		document.getElementById("wrapper").style.top = $(window).height()  + "px";
 		centerImgPadding = $('.more-info').height() - $('.span-pad').height();
 		$('.span-pad').css('top', centerImgPadding / 2 + "px");
-		//CENTER IMAGE VERTICALLY IN DIV
-		/*console.log("WINDOW HEIGHT: ", $(window).height(), "px");
-		console.log("MAIN_PAGE_BACKGROUND HEIGHT: ", document.getElementById("main_page_background").style.height);
-		console.log("PAGE_1 HEIGHT: ", document.getElementById("page_1").style.height);
-		console.log("BODY ID: ", document.getElementById("body-id").style.height);*/
-
-	//}
 }
 
 
@@ -121,7 +85,6 @@ $(document).ready(function(){
 createMoviesHTML();
 	var countTimerCheckWindow = setInterval(function () {
             checkWindow();
-						//checkSlide();
 						checkHeight();
 					}, 200);
 
@@ -146,10 +109,12 @@ createMoviesHTML();
 
 		$('.menu-selected').click(function() {
 			if(!menuOpen) {
+				$('#botao_menu').addClass('is-active');
 				$('#slide_menu').css('margin-left', 0);
 				$('#topo').css('overflow-y', "hidden");
 				menuOpen = true;
 			} else {
+				$('#botao_menu').removeClass('is-active');
 				$('#slide_menu').css('margin-left', "100%");
 				$('#topo').css('overflow-y', "scroll");
 				menuOpen = false;

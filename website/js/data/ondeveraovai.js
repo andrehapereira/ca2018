@@ -2,6 +2,7 @@ var sinopseVerao = "O calor do verão brilha e aquece em quatro capítulos. Um g
 
 var ondeOVeraoVai = {
   "img" : "imagens/filmes/onde_o_verao_vai.jpg",
+  "Trailer" : "https://player.vimeo.com/video/253271093",
   "Título" : "Onde o Verão Vai",
   "Realizador(a)" : "David Pinheiro Vicente",
   "Com" : "Miguel Amorim, Joana Peres, Rodrigo Tomás, Joana Petiz, André Simões, Rodolfo Major",

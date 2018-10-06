@@ -513,99 +513,6 @@ margin-bottom:0px;
 	line-height: 30px;
 	text-align: left;
 }
-#footer {
-	margin: 0 auto;
-	max-width: 345px;
-	overflow: hidden;
-	padding: 60px 0 60px;
-}
-#footer div {
-	float: left;
-	width: auto;
-	padding-right: 40px;
-}
-#footer div span {
-	color: #ffe6b4;
-	display: block;
-	font-size: 20px;
-	line-height: 24px;
-}
-
-#footer div span div#texto {
-	padding-top:13px;
-}
-
-#footer div span div#icons {
-	float: right;
-	padding-right: 0px;
-	margin-right: 0px;
-}
-
-
-#footer div p {
-	color: #b6d8cf;
-	font-size: 12px;
-	line-height: 30px;
-}
-#footer div#new {
-	max-width: 290px;
-}
-
-#footer div img {
-	max-width: 50px;
-	max-height: auto;
-}
-
-#footer div img#prim {
-	padding-right: 10px;
-}
-
-
-
-
-#footer div#connect {
-	float: inherit;
-	overflow: hidden;
-	width: auto;
-
-}
-#footer div#connect a {
-	background: url(../imagens/icons.png) no-repeat;
-	display: block;
-	float: left;
-	text-indent: -99999px;
-}
-#footer div a#outro {
-	background: #FFFFFF;
-	height: 100px;
-	width: 100px;
-
-}
-#footer div a#facebook {
-	background-position: 0 -43px;
-	background-size: 100%;
-	height: 44px;
-	margin: 0 0 0 10px;
-	width: 53px;
-}
-#footer div#connect a#googleplus {
-	background-position: 0 -61px;
-	height: 32px;
-	margin: 0 0 0 19px;
-	width: 32px;
-}
-#footer div#connect a#googleplus {
-	background-position: 0 -61px;
-	height: 32px;
-	margin: 0 0 0 19px;
-	width: 32px;
-}
-#footer div#connect a#pinterest {
-	background-position: 0 -94px;
-	height: 30px;
-	margin: 0 0 0 23px;
-	width: 30px;
-}
 
 #wrapper {
 	position:relative;
@@ -683,28 +590,11 @@ cursor:default;
 	margin-top: -6px;
 	display: block;
 	width: 100%;
-	background: #292b68;
+	background: #262262;
 	display: inline-block;
 	padding:6% 0;
 }
 
-#foto_page2 {
-	width: 50%;
-	background: url(../imagens/foto_1.jpg);
-	background-size: cover;
-	display: inline-block;
-	padding-top: 79.5%
-
-}
-
-#foto_page1 {
-	width: 50%;
-	background: url(../imagens/foto_2.jpg);
-	background-size: cover;
-	display: inline-block;
-	padding-top: 77.5%
-
-}
 
 #page_2 #programa {
 
@@ -775,10 +665,6 @@ cursor:default;
 	color: #ffde17;
 }
 
-.smart {
- display: none !important;
-
-}
 /* FIM PROGRAMA */
 
 /* FILMES */
@@ -801,10 +687,13 @@ cursor:default;
 	display:block;
 }
 
+.margin-movies {
+	margin-top: 30px;
+}
+
 .film-poster {
 	width:100%;
 	max-width: 400px;
-	margin-top:30px;
 	height:88%;
 	max-height: 558px;
 }
@@ -1027,7 +916,7 @@ user-select: none;
 	overflow-y:scroll;
     transition: 1s;
 	font-family: 'oswald-regular';
-	font-size: 1.2vw;
+	font-size:1.2vw;
 	color:#262262;
 	z-index: 300;
 
@@ -1042,9 +931,9 @@ user-select: none;
 }
 
 #close_content {
-	background:url(../imagens/close_button.png)	;
+	background:url(../imagens/close_button_galeria.png)	;
 	width: 80%;
-	background-size:35px;;
+	background-size:25px;;
 	background-repeat: no-repeat;
 	background-position: right;
 	padding-top: 50px;
@@ -1059,122 +948,12 @@ user-select: none;
 	transition:ease-in-out 0.5s;
 }
 
-#cartaz {
-	width: 40%;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	/*padding-top: 62%;*/
-	background-position:center;
-	display:inline-block;
-	vertical-align: top;
-}
-
-#mudardevida_cartaz {
-	display: block;
-	width:100%;
-}
-
-#info_mudardevida {
-	width: 59%;
-	text-align:justify;
-	display:block;
-}
-
-#perdidos_cartaz {
-	display:none;
-	width:100%;
-}
-
-#info_perdidos {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#luzobscura_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_luzobscura {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#realidade_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_realidade {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#fabricadonada_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_fabricadonada {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#alberto_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_alberto {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#treblinka_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_treblinka {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#coracaonegro_cartaz {
-	display: none;
-	width:100%;
-}
-
-#info_coracaonegro {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#info_peregrinacao {
-	width: 59%;
-	text-align:justify;
-	display:none;
-}
-
-#peregrinacao_cartaz {
-	display: none;
-	width:100%;
-}
-
 #content_pos span {
 	font-family: 'oswald-light';
 	font-size: 1.3vw;
 }
 
-#imagens{
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
+
+.cursor-pointer:hover {
+	cursor:pointer;
 }

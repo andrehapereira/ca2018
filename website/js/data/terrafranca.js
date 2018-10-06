@@ -2,6 +2,7 @@ var sinopseTerraFranca = "À beira do Tejo, na antiga comunidade piscatória de 
 
 var terraFranca = {
   "img" : "imagens/filmes/terra_franca.jpg",
+  "Trailer" : "https://player.vimeo.com/video/256136686",
   "Título" : "Terra Franca",
   "Realizador(a)" : "Leonor Telles",
   "Género" : "Documentário",

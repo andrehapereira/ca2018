@@ -2,6 +2,7 @@ var sinopseColo = "O tema da familia e da adolescência é recorrente tanto no c
 
 var colo = {
   "img" : "imagens/filmes/colo.jpg",
+  "Trailer" : "https://www.youtube.com/embed/1Z5-6lHRHS8",
   "Título" : "Colo",
   "Realizador(a)" : "Teresa Villaverde",
   "Com" : "João Pedro Vaz, Beatriz Batarda, Simone de Oliveira, Alice Albergaria Borges, Tomás Gomes, Rita Blanco, Clara Jost.",

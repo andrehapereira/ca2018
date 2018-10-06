@@ -2,6 +2,7 @@ var sinopseFarpoesBaldios = "No final do século XIX, os trabalhadores rurais em
 
 var farpoesBaldios = {
   "img" : "imagens/filmes/farpoes_baldios.jpg",
+  "Trailer" : "https://player.vimeo.com/video/220806703",
   "Título" : "Farpões Baldios",
   "Realizador(a)" : "Marta Mateus",
   "Com" : "Maria Clara Madeira, Gonçalo Prudêncio, Maria Catarina Sapata, José Codices, Francisco Barbeiro",

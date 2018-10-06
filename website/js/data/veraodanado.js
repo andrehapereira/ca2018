@@ -2,6 +2,7 @@ var sinopseVeraoDanado = "Chico (Pedro Marujo) acaba de terminar o curso. Com di
 
 var veraoDanado = {
   "img" : "imagens/filmes/verao_danado.jpg",
+  "Trailer" : "https://www.youtube.com/embed/U7FG7ciqKJY",
   "Título" : "Verão Danado",
   "Realizador(a)" : "Pedro Cabeleira",
   "Com" : "Pedro Marujo, Lia Carvalho, Ana Valentim",

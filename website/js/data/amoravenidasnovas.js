@@ -2,6 +2,7 @@ var sinopseAmor = "Amor, Avenidas Novas é uma encantadora fábula sobre o roman
 
 var amorAvenidasNovas = {
   "img" : "imagens/filmes/amor_avenidas_novas.jpg",
+  "Trailer" : "https://player.vimeo.com/video/265758987",
   "Título" : "Amor, Avenidas Novas",
   "Realizador(a)" : "Duarte Coimbra",
   "Com" : "Manuel Lourenço, Beatriz Luís,Marcelo Tavares,Carolina Caramujo, Nena Coimbra",

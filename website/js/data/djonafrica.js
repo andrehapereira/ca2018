@@ -2,6 +2,7 @@ var sinopseDjonAfrica = "“Djon África”, é a primeira de ficção da dupla 
 
 var djonAfrica = {
   "img" : "imagens/filmes/djon_africa.jpg",
+  "Trailer" : "https://player.vimeo.com/video/252505982",
   "Título" : "Djon África",
   "Realizador(a)" : "Filipa Reis e João Miller Guerra",
   "Com" : "Miguel Moreira e Isabel Cardoso",

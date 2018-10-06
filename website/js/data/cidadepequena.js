@@ -2,6 +2,7 @@ var sinopseCidadePequena = "Um dia, Frederico aprende na escola que as pessoas t
 
 var cidadePequena = {
   "img" : "imagens/filmes/cidade_pequena.jpg",
+  "Trailer" : "https://www.youtube.com/embed/vNmgVL3otgk",
   "Título" : "Cidade Pequena",
   "Realizador(a)" : "Diogo Costa Amarante",
   "Com" : "Frederico Costa Amarante Barreto, Mara Costa Amarante",

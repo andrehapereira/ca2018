@@ -21,12 +21,12 @@ function createMoviesHTML() {
   moviesHTML += "<div class='row'>";
   var counter = 0;
   movieObjArr.forEach(function (movie) {
-    moviesHTML += "<div class='col-xs-12 col-sm-6 col-md-4'>"
+    moviesHTML += "<div class='col-xs-12 col-sm-6 col-md-4 margin-movies'>"
     moviesHTML += "<img class='film-poster' src='" + movie.img + "' />"
     moviesHTML += "<div class='more-info'>"
     moviesHTML += "<div class='row'>";
     moviesHTML += "<div class='col-xs-2 col-sm-2 col-md-2 col-2'>";
-    moviesHTML += "<img onclick='openSubContent(" + counter + ")' src='imagens/plus.png' />";
+    moviesHTML += "<img class='cursor-pointer' onclick='openSubContent(" + counter + ")' src='imagens/plus.png' />";
     moviesHTML += "</div>";
     moviesHTML += "<div class='col-xs-10 col-sm-10 col-md-10 col-10'>";
     moviesHTML += "<span class='span-pad'>" + movie.Título.toUpperCase() + "</span>";

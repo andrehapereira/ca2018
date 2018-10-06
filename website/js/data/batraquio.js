@@ -2,6 +2,7 @@ var sinopseBatraquio = "Tal como os ciganos, os sapos de loiça não passam desp
 
 var batraquio = {
   "img" : "imagens/filmes/balada_de_um_batraquio.jpg",
+  "Trailer" : "https://www.youtube.com/embed/nJsYUivrGic",
   "Título" : "A Balada de Um Batráquio",
   "Realizador(a)" : "Leonor Teles",
   "Género" : "Documentário",
